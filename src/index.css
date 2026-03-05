@@ -1,0 +1,17 @@
+:root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  scroll-behavior: smooth;
+
+  --corPrimaria: #f4f6f8;
+  --corSecundaria: black;
+  --corSombra: rgba(0, 0, 0, 0.377);
+  --elementsFormas: rgba(128, 128, 128, 0.281);
+  --elementsTxt: rgba(7, 7, 7, 0.37);
+  --bgVermelho: rgb(255, 0, 0);
+  --bgVermelhoFraco: rgb(124, 0, 0);
+  --bgConcluido: rgb(47, 255, 47);
+  --bgEmAndamento: rgb(253, 167, 6);
+  --bgButtonGithub: rgb(83, 6, 155);
+}

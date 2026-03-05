@@ -1,0 +1,780 @@
+    @keyframes efeitoBgVermelho {
+
+        0%,
+        100% {
+            background-color: var(--corSecundaria);
+        }
+
+        50% {
+            background-color: var(--bgVermelho);
+        }
+    }
+
+    .show-projeto-titulo {
+        opacity: 1;
+        transform: translateY(0px) !important;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    .hidden-projeto-titulo {
+        opacity: 0;
+        transform: translateY(-50px) !important;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    .show-projetos {
+        opacity: 1;
+        transform: translateX(0px) !important;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    .hidden-projetos {
+        opacity: 0;
+        transform: translateX(80px) !important;
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    @media (min-width: 1000px) {
+
+        #section-projetos {
+            background-size: contain;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #section-projetos::before {
+            background: url("/bgDesktopProjetos.png") center/cover no-repeat;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur(4px);
+        }
+
+        #CtassetsProjetos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        #container-titulo-projetos {
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-projetos-titulo h1 {
+            font-size: clamp(60px, 5vw, 80px);
+            letter-spacing: 6px;
+        }
+
+        #div-projetos-titulo h3 {
+            font-size: clamp(30px, 3vw, 60px);
+            letter-spacing: 6px;
+            padding: 2% 5.4%;
+            width: 100%;
+            transform: rotate(-2deg);
+
+            background-color: var(--corSecundaria);
+            color: var(--corPrimaria);
+            box-shadow: 8px 8px 0px var(--corSecundaria);
+            outline: 2px solid var(--corPrimaria);
+            transition: 0.3s ease-in;
+
+            animation: efeitoBgVermelho 6s infinite;
+        }
+
+        #container-projetos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 80%;
+            height: 60% !important;
+
+            z-index: 2;
+        }
+
+        .carousel-inner {
+            display: flex;
+            justify-content: center;
+            margin-top: 8.5%;
+            width: 60%;
+
+            height: 31.5vw;
+            max-height: 565px;
+            min-height: 460px;
+            gap: 4vw !important;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            display: flex;
+        }
+
+        .div-projetos {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            max-width: 400px;
+            max-height: 528px;
+            min-height: 435px;
+            width: 28vw;
+            height: 40vw;
+
+            background-color: var(--corPrimaria);
+            border: 4px solid var(--corSecundaria);
+            box-shadow: 10px 10px 0px var(--corSecundaria);
+            transition: 0.3s ease;
+        }
+
+
+        /* Animação status do projeto */
+        .div-projetos:hover .status-projetos {
+            opacity: 1;
+            box-shadow: 0px 0px 0px var(--corSecundaria);
+            animation: scaleIn 0.3s ease-in forwards;
+        }
+
+        .status-projetos {
+            position: absolute;
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            z-index: 2;
+            left: -40px;
+            transform: rotate(-30deg);
+            border: 2px solid var(--corSecundaria);
+            background-color: var(--bgConcluido);
+            scale: 6;
+            opacity: 0;
+            box-shadow: 4px 4px 20px var(--corSecundaria);
+            pointer-events: none;
+            transition: opacity 0.3s ease-out;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                scale: 6;
+                opacity: 0;
+            }
+
+            100% {
+                scale: 1;
+                opacity: 1;
+            }
+        }
+
+        .div-foto-projetos {
+            min-height: 224px;
+            margin-top: 30px;
+            width: 84%;
+            height: 200px;
+            border: 2px solid var(--corSecundaria);
+            overflow: hidden;
+        }
+
+        .div-projetos:hover {
+            transform: rotate(1deg);
+        }
+
+        .div-foto-projetos img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.6);
+            transform-origin: top center;
+            filter: grayscale(100%);
+            transition: 0.5s ease;
+        }
+
+        .div-projetos:hover .div-foto-projetos img {
+            filter: none;
+            transform: scale(1.8);
+        }
+
+        .div-info-projetos h1 {
+
+            width: 85%;
+            margin: 4% auto;
+            font-size: clamp(13px, 1.9vw, 30px);
+            letter-spacing: 3px;
+            text-align: left;
+        }
+
+        .div-info-projetos P {
+            width: 85%;
+            font-size: clamp(1px, 1.4vw, 20px);
+            margin: 0px auto 4% auto;
+            text-align: left;
+
+        }
+
+        .div-tecnologias-projeto {
+            width: 86%;
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .div-tecnologias-projeto span {
+            /* background-color: var(--corSecundaria); */
+            width: 2vw;
+            color: var(--corPrimaria);
+        }
+
+        .div-tecnologias-projeto span img {
+            width: 2.4vw;
+            transform: none !important;
+        }
+
+        .div-projeto-botoes {
+            width: 85%;
+            margin: 4% 0px;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+
+        }
+
+        .div-projeto-botoes button {
+            padding: 16px;
+            font-size: clamp(1px, 1.4vw, 60px);
+            border: none;
+            background-color: var(--corSecundaria);
+            color: var(--corPrimaria);
+            transition: 0.3s ease;
+            width: 10vw;
+        }
+
+        .div-projeto-botoes button:hover {
+            background-color: var(--bgVermelho);
+            outline: 4px solid var(--corSecundaria);
+
+        }
+
+        .div-projeto-botoes button:last-child:hover {
+            background-color: var(--bgButtonGithub);
+        }
+
+        #projeto-todo-list .status-projetos {
+            background-color: var(--bgEmAndamento);
+        }
+
+        #projeto-lista-compras .status-projetos {
+            background-color: var(--bgEmAndamento);
+        }
+
+        #projeto-calc img {
+            transform: scale(1.2);
+        }
+
+        #projeto-calc:hover img {
+            transform: scale(1.4);
+        }
+
+        @media (max-width: 1150px) {
+            .div-tecnologias-projeto {
+                display: none;
+            }
+        }
+
+        #nav-button-projetos {
+            margin-top: 30px;
+            z-index: 2;
+            height: 60px;
+            width: 82%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        #nav-button-projetos button {
+            width: 140px;
+            height: 80px;
+            font-size: 1.6rem;
+            color: var(--corSecundaria);
+            background-color: var(--corPrimaria);
+            border: 2px solid rgb(0, 0, 0);
+            box-shadow: 6px 6px 0px 0px;
+            display: none;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        #section-projetos {
+            background-size: contain;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            gap: clamp(0.9rem, 6vw, 2.8rem);
+            display: flex;
+            overflow: hidden;
+
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #section-projetos::before {
+            background: url("/bgTabletProjetos.png") center/cover no-repeat;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur(3.5px);
+        }
+
+        #svgBgProjeto {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        #CtassetsProjetos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+
+        #container-titulo-projetos {
+            z-index: 2;
+            width: 100%;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-projetos-titulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-projetos-titulo h1 {
+            font-size: clamp(60px, 10vw, 400px);
+            letter-spacing: 6px;
+        }
+
+        #div-projetos-titulo h3 {
+            font-size: clamp(0px, 6.5vw, 45px);
+            letter-spacing: 4px;
+            padding: 0.8rem;
+            width: 80%;
+            max-width: 490px;
+            transform: rotate(-2deg);
+
+            background-color: var(--corSecundaria);
+            color: var(--corPrimaria);
+            box-shadow: 8px 8px 0px var(--corSecundaria);
+            outline: 2px solid var(--corPrimaria);
+            transition: 0.3s ease-in;
+
+            animation: efeitoBgVermelho 6s infinite;
+        }
+
+        #container-projetos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            height: 120vw;
+            max-height: 640px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 87vw;
+            max-width: 505px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .div-projetos {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+
+            min-height: 420px;
+            max-width: 500px;
+
+            width: 87%;
+            height: 75vw;
+            gap: 10px;
+
+            background-color: var(--corPrimaria);
+            border: 4px solid var(--corSecundaria);
+            box-shadow: 10px 10px 0px var(--corSecundaria);
+            transition: 0.3s ease;
+        }
+
+        .div-foto-projetos {
+            min-height: 150px;
+            /* min-width: 380px; */
+            margin-top: clamp(0.9rem, 7vw, 2.7rem);
+
+            width: 82%;
+            height: 60vw;
+            border: 2px solid var(--corSecundaria);
+            overflow: hidden;
+        }
+
+        .div-foto-projetos img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.6);
+            transform-origin: top center;
+        }
+
+        .status-projetos {
+            position: absolute;
+            padding: 8px 6px;
+            font-size: clamp(16px, 4vw, 25px);
+            z-index: 2;
+            top: 0px;
+            left: -5vw;
+            transform: rotate(-30deg);
+            border: 2px solid var(--corSecundaria);
+            background-color: var(--bgConcluido);
+            pointer-events: none;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .div-info-projetos {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 84%;
+        }
+
+        .div-info-projetos h1 {
+            width: 100%;
+            font-size: clamp(0.9rem, 6vw, 2.4rem);
+            letter-spacing: 3px;
+            text-align: left;
+        }
+
+        .div-info-projetos P {
+            width: 100%;
+            font-size: clamp(0.9rem, 3.6vw, 1.5rem);
+            text-align: left;
+
+        }
+
+        .div-tecnologias-projeto {
+            width: 84%;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+        }
+
+        .div-tecnologias-projeto img {
+            width: 30px;
+            height: 30px;
+            
+        }
+
+        .div-projeto-botoes {
+            margin-bottom: clamp(0.9rem, 7vw, 2.7rem);
+            width: 83%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .div-projeto-botoes button {
+            font-size: clamp(0.9rem, 3.6vw, 1.5rem);
+            padding: 12px;
+            width: 26vw;
+            max-height: 70px;
+            max-width: 150px;
+            height: 12vw;
+            border: none;
+            background-color: var(--bgVermelho);
+            outline: 4px solid var(--corSecundaria);
+            color: var(--corPrimaria);
+            transition: 0.3s ease;
+        }
+
+        .div-projeto-botoes button:last-child {
+            background-color: var(--bgButtonGithub);
+        }
+
+        #nav-button-projetos {
+            z-index: 2;
+            width: 72%;
+            max-width: 420px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #nav-button-projetos button {
+            max-width: 160px;
+            max-height: 85px;
+            width: 26vw;
+            height: 14vw;
+            font-size: clamp(0.9rem, 3.5vw, 2.4rem);
+            color: var(--corSecundaria);
+            background-color: var(--corPrimaria);
+            border: 2px solid rgb(0, 0, 0);
+            box-shadow: 6px 6px 0px 0px;
+        }
+    }
+
+    /* @media (max-width: 767px) {
+        #section-projetos {
+            background-size: contain;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #section-projetos::before {
+            background: url("/bgMobileProjetos.png") center/cover no-repeat;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur(3.5px);
+
+        }
+
+        #svgBgProjeto {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        #CtassetsProjetos {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+
+        #container-titulo-projetos {
+            z-index: 2;
+            width: 100%;
+            height: 120px;
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-projetos-titulo h1 {
+            font-size: clamp(60px, 5vw, 80px);
+            letter-spacing: 6px;
+
+        }
+
+        #div-projetos-titulo h3 {
+            font-size: clamp(0px, 6vw, 60px);
+            letter-spacing: 6px;
+            padding: 2%;
+            width: 100%;
+            transform: rotate(-2deg);
+
+            background-color: var(--corSecundaria);
+            color: var(--corPrimaria);
+            box-shadow: 8px 8px 0px var(--corSecundaria);
+            outline: 2px solid var(--corPrimaria);
+            transition: 0.3s ease-in;
+
+            animation: efeitoBgVermelho 6s infinite;
+        }
+
+        #container-projetos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            flex-direction: row;
+
+            width: 100%;
+            height: 60%;
+
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 80%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex-shrink: 0;
+        }
+
+        .div-projetos {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+
+            max-width: 400px;
+            min-height: 28.5rem;
+            max-height: 29rem;
+
+            width: 80vw;
+            height: 92%;
+
+            background-color: var(--corPrimaria);
+            border: 4px solid var(--corSecundaria);
+            box-shadow: 10px 10px 0px var(--corSecundaria);
+            transition: 0.3s ease;
+        }
+
+        .div-foto-projetos {
+            min-height: 150px;
+            margin-top: 29px;
+            width: 84%;
+            height: 190px;
+            border: 2px solid var(--corSecundaria);
+            overflow: hidden;
+        }
+
+        .div-foto-projetos img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.6);
+            transform-origin: top center;
+        }
+
+        .status-projetos {
+            position: absolute;
+            padding: 8px 6px;
+            font-size: 1rem;
+            z-index: 2;
+            left: -35px;
+            transform: rotate(-30deg);
+            border: 2px solid var(--corSecundaria);
+            background-color: var(--bgConcluido);
+            pointer-events: none;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .div-info-projetos {
+            width: 84%;
+        }
+
+        .div-info-projetos h1 {
+
+            width: 100%;
+
+            margin: 4% auto;
+            font-size: 6vw;
+            letter-spacing: 3px;
+            text-align: left;
+        }
+
+        .div-info-projetos P {
+            width: 100%;
+            font-size: 3.6vw;
+            margin: 0px auto 4% auto;
+            text-align: left;
+
+        }
+
+        .div-tecnologias-projeto {
+            width: 84%;
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+
+        }
+
+        .div-tecnologias-projeto span {
+            padding: 8px;
+            font-size: 2.5vw;
+            letter-spacing: 1.5px;
+            background-color: var(--corSecundaria);
+            color: var(--corPrimaria);
+
+        }
+
+        .div-projeto-botoes {
+            width: 85%;
+            margin: 4% 0px;
+            display: flex;
+
+            justify-content: space-between;
+            gap: 16px;
+
+        }
+
+        .div-projeto-botoes button {
+            font-size: 4vw;
+            width: 110px;
+            height: 50px;
+            padding: 10px;
+            border: none;
+            background-color: var(--bgVermelho);
+            outline: 2.5px solid var(--corSecundaria);
+            transition: 0.3s ease;
+        }
+
+        .div-projeto-botoes button:last-child {
+            background-color: var(--bgButtonGithub);
+        }
+
+        #nav-button-projetos {
+            margin-top: 30px;
+            z-index: 2;
+            height: 60px;
+            width: 82%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #nav-button-projetos button {
+            width: 110px;
+            height: 60px;
+            font-size: 1.3rem;
+            color: var(--corSecundaria);
+            background-color: var(--corPrimaria);
+            border: 2px solid rgb(0, 0, 0);
+            box-shadow: 6px 6px 0px 0px;
+        }
+
+    } */
