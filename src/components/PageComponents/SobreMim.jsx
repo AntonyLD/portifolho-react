@@ -53,7 +53,7 @@ const SobreMim = () => {
             <p>Desenvolvedor Front-End apaixonado por criar interfaces que impressionam e funcionam perfeitamente. Transformo ideias em realidade digital usando as mais modernas tecnologias.</p>
           </div>
           <div className='hidden-info-Preto' id='text-sobreMimPreto'>
-            <p>Especializado em React, TypeScript, e criação de experiências de usuário que fazem a diferença. Cada projeto é uma nova aventura!</p>
+            <p>Familiarizado em React, JavaScript, e criação de experiências de usuário que fazem a diferença. Cada projeto é uma nova aventura!</p>
           </div>
         </div>
         <div id='container-perfil-sobreMim'>
@@ -65,9 +65,9 @@ const SobreMim = () => {
             <span id='spanNovo-box-perfil-sobreMim'>NOVO!</span>
             <div id='txt-perfil-sobreMim'>
               <ul id='ul-info-sobreMim'>
-                <li><span></span> Localização: Irineu</li>
-                <li><span></span> Experiência: lv 30 de xp no mine</li>
-                <li><span></span> Foco: Dale pra não tomale</li>
+                <li><span></span> Nome: Antony L.D </li>
+                <li><span></span> Experiência: 2 anos</li>
+                <li><span></span> Foco: Desenvolvedor Web</li>
               </ul>
             </div>
           </div>

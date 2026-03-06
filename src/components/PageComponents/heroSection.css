@@ -306,7 +306,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 8%;
+        gap: 6%;
 
         height: 100%;
         width: 40%;
@@ -321,10 +321,16 @@
 
     #box-info-apresentacao h4 {
         font-size: 2rem;
+        letter-spacing: 2px;
     }
 
     #box-info-apresentacao h1 {
-        font-size: 4rem;
+        font-size: 5rem;
+        letter-spacing: 6px;
+    }
+
+    #box-info-apresentacao p{
+        font-size: 1.5rem;
     }
 
     /* Estilo botões */
@@ -472,13 +478,14 @@
 
     #box-info-apresentacao h4 {
         font-size: 3rem;
+        
     }
 
     #box-info-apresentacao h1 {
         font-size: 6rem;
     }
 
-        #box-info-apresentacao p {
+    #box-info-apresentacao p {
         width: 80%;
     }
 

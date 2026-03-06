@@ -40,9 +40,9 @@ const HeroSection = () => {
       </div>
       <div id='div-apresentacao'>
         <div className='hidden-box' id='box-info-apresentacao'>
-          <h4>TITULO TESTE</h4>
-          <h1>TESTE-EEE</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, rerum?</p>
+          <h4>EU SOU DESENVOLVEDOR</h4>
+          <h1>FRONT-END</h1>
+          <p>Criando experiências digitais incríveis com código limpo e design impactante!</p>
           <div id='botoes-apresentacao'>
             <div id='div-btn-sobreMim'>
               <a href='#section-projetos' id='btn-sobreMim'>PROJETOS</a>
