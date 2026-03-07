@@ -140,6 +140,7 @@
         height: 25%;
         width: 100%;
         position: relative;
+        
     }
 
     .baloes {
@@ -607,15 +608,11 @@
         height: 32vw;
         width: 100%;
         position: relative;
-
     }
 
     .baloes {
         width: 96vw;
         padding-right: 4vw;
-        /* max-width: 280px;
-        min-width: 250px; */
-
     }
 
     #div-apresentacao {

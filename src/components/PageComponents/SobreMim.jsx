@@ -65,9 +65,9 @@ const SobreMim = () => {
             <span id='spanNovo-box-perfil-sobreMim'>NOVO!</span>
             <div id='txt-perfil-sobreMim'>
               <ul id='ul-info-sobreMim'>
-                <li><span></span> Nome: Antony L.D </li>
-                <li><span></span> Experiência: 2 anos</li>
-                <li><span></span> Foco: Desenvolvedor Web</li>
+                <li><span><img className='estrelas-sobre-mim' src="/estrela-pequena.png" alt="Estrela" /></span> Nome: Antony L.D </li>
+                <li><span><img className='estrelas-sobre-mim' src="/estrela-pequena.png" alt="Estrela" /></span> Experiência: 2 anos</li>
+                <li><span><img className='estrelas-sobre-mim' src="/estrela-pequena.png" alt="Estrela" /></span> Foco: Desenvolvedor Web</li>
               </ul>
             </div>
           </div>

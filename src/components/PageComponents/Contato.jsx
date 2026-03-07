@@ -3,12 +3,12 @@ import './contato.css';
 
 const Contato = () => {
   useEffect(() => {
-    // mapa de cada id -> classe que mostra
+    
     const elements = [
       { id: "titulo-contato", showClass: "show-contato-titulo" },
       { id: "info-contato", showClass: "show-info-contato" },
       { id: "div-forms", showClass: "show-div-forms" },
-    ];
+    ]; 
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -17,24 +17,21 @@ const Contato = () => {
           const config = elements.find((e) => e.id === el.id);
 
           if (config) {
-            // pega todas as classes hidden-* e remove
+            
             el.classList.forEach((cls) => {
               if (cls.startsWith("hidden-")) {
                 el.classList.remove(cls);
               }
             });
 
-            // adiciona a classe show certa
             el.classList.add(config.showClass);
 
-            // se quiser animar só 1x
             observer.unobserve(el);
           }
         }
       });
-    }, { threshold: 0.2 }); // dispara quando 20% do elemento aparece
+    }, { threshold: 0.2 });
 
-    // observa todos os elementos
     elements.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -91,26 +88,18 @@ const Contato = () => {
           <h1>VAMOS CRIAR ALGO INCRÍVEL JUNTOS!</h1>
           <p id='p-info-contato'>Tem um projeto em mente? Precisa de ajuda com desenvolvimento front-end? Ou só quer bater um papo sobre tecnologia? Estou aqui para ajudar!</p>
           <div id='div-contato'>
-            <div className='contato'>
-              <span><img src="/linkedin.png" alt="icone gmail" /></span>
+            <div className='contato' id='linkedin'>
               <div>
                 <p className='p-titulo'>LinkedIn</p>
-                <p className='p-contato'>seuemail@exemplo.com</p>
+                <a href="https://www.linkedin.com/in/antony-lídio-3536622a7/" target="_blank" rel="noopener noreferrer"><img src="/linkedin.png" alt="icone gmail" /></a>
               </div>
+              
             </div>
-            <div className='contato'>
-              <span className='contato-mail'><img src="/gmail.png" alt="icone gmail" /></span>
-              <div className='contato-mail'>
-                <p className='p-titulo'>Email</p>
-                <p className='p-contato'>seuemail@exemplo.com</p>
-              </div>
-
-            </div>
-            <div className='contato'>
-              <span><img src="/github.png" alt="icone gmail" /></span>
+            <div className='contato' id='gitHub'>
               <div>
                 <p className='p-titulo'>GitHub</p>
-                <p className='p-contato'>seuemail@exemplo.com</p>
+                <a href="https://github.com/AntonyLD" target="_blank" rel="noopener noreferrer"><img src="/github.png" alt="icone gmail" /></a>
+                
               </div>
             </div>
           </div>

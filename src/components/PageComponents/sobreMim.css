@@ -16,6 +16,15 @@
     }
 }
 
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 [id^="onda"] {
     transform-origin: center;
     animation-name: animacaoOnda;
@@ -479,6 +488,28 @@
         width: 1rem;
         border-radius: 50%;
         background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    #card-perfil-sobreMim:hover li span{
+        background-color: transparent;
+        
+    }
+
+    #card-perfil-sobreMim:hover .estrelas-sobre-mim{
+        width: 52px;
+        opacity: 1;
+        animation: girar 6s linear infinite;
+    }
+
+    .estrelas-sobre-mim{
+        width: 10px;
+        opacity: 0;
+        transition: 0.5s;
+        animation: girar 6s linear infinite;
     }
 }
 
@@ -681,11 +712,18 @@
     }
 
     #ul-info-sobreMim li span {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-right: 15px;
         height: 2.5vw;
         width: 2.5vw;
         border-radius: 50%;
         background-color: black;
+    }
+
+    .estrelas-sobre-mim{
+        width: 400%;
+        animation: girar 6s linear infinite;
     }
 }
