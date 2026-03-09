@@ -5,7 +5,7 @@ import DivProjetos from "../csvComponentes/DivProjetos";
 const Projetos = () => {
 
   useEffect(() => {
-    // mapa de cada id -> classe que mostra
+    
     const elements = [
       { id: "div-projetos-titulo", showClass: "show-projeto-titulo" },
       { id: "container-projetos", showClass: "show-projetos" },
@@ -18,24 +18,19 @@ const Projetos = () => {
           const config = elements.find((e) => e.id === el.id);
 
           if (config) {
-            // pega todas as classes hidden-* e remove
+            
             el.classList.forEach((cls) => {
               if (cls.startsWith("hidden-")) {
                 el.classList.remove(cls);
               }
             });
 
-            // adiciona a classe show certa
             el.classList.add(config.showClass);
-
-            // se quiser animar só 1x
             observer.unobserve(el);
           }
         }
       });
-    }, { threshold: 0.2 }); // dispara quando 20% do elemento aparece
-
-    // observa todos os elementos
+    }, { threshold: 0.2 });
     elements.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -68,15 +63,15 @@ const Projetos = () => {
       githubLink: "https://github.com/usuario/projeto",
     },
     {
-      btnTxt: "EM BREVE",
+      btnTxt: "VER PROJETO",
       status: "EM ANDAMENTO",
       id: "projeto-lista-compras",
-      imagem: "/ListaDeCompra.png",
-      titulo: "LISTA DE COMPRAS",
+      imagem: "/ListaDeCompraCadastro.png",
+      titulo: "COMPRIFY LIST",
       descricao: "Cadastro personalizado e compra de produtos com histórico de compras",
-      tecnologias: ["css.png", "js.png", "html.png", "react.png", "ts.png"],
-      verProjetoLink: "http://localhost:5173/",
-      githubLink: "https://github.com/usuario/projeto",
+      tecnologias: ["css.png", "js.png", "html.png","ts.png"],
+      verProjetoLink: "https://lista-de-compras-topaz-phi.vercel.app/index.html",
+      githubLink: "https://github.com/AntonyLD/Lista-de-compras",
     },
   ];
 
