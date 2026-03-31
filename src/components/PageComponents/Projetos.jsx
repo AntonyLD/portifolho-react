@@ -59,8 +59,8 @@ const Projetos = () => {
       titulo: "Rick and Morty Explorer",
       descricao: "Aplicação web que consome a API de Rick and Morty para exibição dinâmica.",
       tecnologias: ["css.png", "js.png", "html.png"],
-      verProjetoLink: "https://antonyld.github.io/Tip-calculator-app/",
-      githubLink: "https://github.com/usuario/projeto",
+      verProjetoLink: "https://rick-and-morty-pied-three.vercel.app",
+      githubLink: "https://github.com/AntonyLD/rick_and_morty",
     },
     {
       btnTxt: "VER PROJETO",
