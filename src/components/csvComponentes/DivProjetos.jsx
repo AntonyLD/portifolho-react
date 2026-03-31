@@ -1,6 +1,5 @@
-import React from 'react'
 
-const DivProjetos = ({ imagem, titulo, descricao, tecnologias, verProjetoLink, gitHubLink, id, status, btnTxt }) => {
+const DivProjetos = ({ imagem, titulo, descricao, tecnologias, verProjetoLink, gitHubLink, id, status, btnDeploy, btnGithub }) => {
     return (
         <div id={id} className='div-projetos'>
             <span className='status-projetos'>{status}</span>
@@ -17,8 +16,8 @@ const DivProjetos = ({ imagem, titulo, descricao, tecnologias, verProjetoLink, g
                 ))}
             </div>
             <div className='div-projeto-botoes'>
-                <button onClick={() => window.open(verProjetoLink, "_blank")}>{btnTxt}</button>
-                <button onClick={() => window.open(gitHubLink, "_blank")}>GITHUB</button>
+                <button onClick={() => window.open(verProjetoLink, "_blank")}>{btnDeploy}</button>
+                <button onClick={() => window.open(gitHubLink, "_blank")}>{btnGithub}</button>
             </div>
         </div>
     )

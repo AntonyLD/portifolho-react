@@ -41,7 +41,8 @@ const Projetos = () => {
 
   const projetos = [
     {
-      btnTxt: "VER PROJETO",
+      btnDeploy: "VER PROJETO",
+      btnGithub: "GITHUB",
       status: "EM ANDAMENTO",
       id: "projeto-todo-list",
       imagem: "/Projeto-Todo-list.png",
@@ -52,7 +53,8 @@ const Projetos = () => {
       githubLink: "https://github.com/usuario/projeto",
     },
     {
-      btnTxt: "VER PROJETO",
+      btnDeploy: "VER PROJETO",
+      btnGithub: "GITHUB",
       status: "CONCLUIDO",
       id: "projeto-calc",
       imagem: "/rickandmortyIMG.png",
@@ -63,7 +65,8 @@ const Projetos = () => {
       githubLink: "https://github.com/AntonyLD/rick_and_morty",
     },
     {
-      btnTxt: "VER PROJETO",
+      btnDeploy: "VER PROJETO",
+      btnGithub: "GITHUB",
       status: "EM ANDAMENTO",
       id: "projeto-lista-compras",
       imagem: "/ListaDeCompraCadastro.png",
