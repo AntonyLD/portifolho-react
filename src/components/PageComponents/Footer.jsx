@@ -7,7 +7,6 @@ const Footer = () => {
         <footer className='secao'>
             <div id='div-footer'>
                 <h3>Desenvolvido com ❤️ e muito ☕</h3>
-                <p>© 2025 - Todos os direitos reservados</p>
             </div>
 
             <div class="card-3d">

@@ -19,7 +19,7 @@ const DivProjetos = ({ imagem, titulo, descricao, tecnologias, verProjetoLink, g
                 <button onClick={() => window.open(verProjetoLink, "_blank")}>{btnDeploy}</button>
                 <button onClick={() => window.open(gitHubLink, "_blank")}>{btnGithub}</button>
             </div>
-        </div>
+        </div> 
     )
 }
 

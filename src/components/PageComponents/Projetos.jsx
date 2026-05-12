@@ -50,7 +50,7 @@ const Projetos = () => {
       descricao: "Uma lista de tarefas onde se pode cadastrar editar, excluir, e concluir",
       tecnologias: ["css.png", "js.png", "html.png"],
       verProjetoLink: "https://antonyld.github.io/To-do-list/",
-      githubLink: "https://github.com/usuario/projeto",
+      gitHubLink: "https://github.com/AntonyLD/To-do-list",
     },
     {
       btnDeploy: "VER PROJETO",
@@ -62,7 +62,7 @@ const Projetos = () => {
       descricao: "Aplicação web que consome a API de Rick and Morty para exibição dinâmica.",
       tecnologias: ["css.png", "js.png", "html.png"],
       verProjetoLink: "https://rick-and-morty-pied-three.vercel.app",
-      githubLink: "https://github.com/AntonyLD/rick_and_morty",
+      gitHubLink: "https://github.com/AntonyLD/rick_and_morty",
     },
     {
       btnDeploy: "VER PROJETO",
@@ -74,7 +74,7 @@ const Projetos = () => {
       descricao: "Cadastro personalizado, compra de produtos com histórico.",
       tecnologias: ["css.png", "js.png", "html.png","ts.png"],
       verProjetoLink: "https://lista-de-compras-topaz-phi.vercel.app/index.html",
-      githubLink: "https://github.com/AntonyLD/Lista-de-compras",
+      gitHubLink: "https://github.com/AntonyLD/Lista-de-compras",
     },
   ];
 
